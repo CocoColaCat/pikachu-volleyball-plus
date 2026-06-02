@@ -1,0 +1,27 @@
+name: Deploy Pikachu Volleyball to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 如果你的預設分支叫 main，請改成 main
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🚀
+        uses: actions/checkout@v4
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # 告訴 GitHub 將打包後的 dist 資料夾內容推送到 gh-pages 分支
+          branch: gh-pages
