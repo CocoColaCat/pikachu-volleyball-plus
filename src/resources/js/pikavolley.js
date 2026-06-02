@@ -40,7 +40,7 @@ export class PikachuVolleyball {
     this.audio = new PikaAudio(resources);
     this.physics = new PikaPhysics(true, true);
     this.keyboardArray = [
-      new PikaKeyboard('KeyA', 'KeyD', 'KeyW', 'KeyV', 'Space', 'KeyF'), // for player1
+      new PikaKeyboard('KeyA', 'KeyD', 'KeyW', 'KeyV', 'Space', 'KeyS'), // for player1
       new PikaKeyboard( // for player2
         'ArrowLeft',
         'ArrowRight',
